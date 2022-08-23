@@ -1,0 +1,10 @@
+document.getElementByid('titulo').innerHtml = '<em> Alunos </em> //atribui um comando HTML chama o html
+
+function addLinha(){
+    let listaAntiga = document.getElementByid('listaAntiga').innerHtml//atribuido o id na variavel do script
+    alunos += 1 // variavel auxiliar atribuindo somatória 
+    document.getElementByid('listaAntiga').innerHtml listaAntiga + ´<li>aluno ${alunos} </li>//interpolação usando a variavel auxiliar
+    let lista = document.createElement('li')
+    lista.innerText = `aluno $(alunos)`
+    listaAntiga.appendChild(lista)
+}
